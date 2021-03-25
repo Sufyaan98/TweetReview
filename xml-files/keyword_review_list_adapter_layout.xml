@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/item_text"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:text="Keyword/Review"
+        android:textColor="#000000" />
+
+    <TextView
+        android:id="@+id/relevancy_text"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/item_text"
+        android:padding="5dp"
+        android:text="Relevancy/Confidence"
+        android:textColor="@android:color/darker_gray" />
+
+    <TextView
+        android:id="@+id/pos_or_neg_text"
+        android:layout_width="match_parent"
+        android:layout_height="58dp"
+        android:layout_toRightOf="@id/item_text"
+        android:gravity="center"
+        android:padding="5dp"
+        android:text="Pos/Neg"
+        android:textColor="#000000" />
+
+</RelativeLayout>

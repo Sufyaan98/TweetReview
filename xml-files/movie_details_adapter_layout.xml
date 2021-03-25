@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/relativeLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/poster_image_view"
+        android:layout_width="wrap_content"
+        android:layout_height="150dp"
+        android:padding="5dp"
+        app:srcCompat="@drawable/ic_launcher_foreground" />
+
+    <TextView
+        android:id="@+id/movie_title_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@id/poster_image_view"
+        android:text="Movie title"
+        android:textColor="#000000"
+        android:fontFamily="@font/bebas_regular"
+        android:textSize="22sp" />
+
+    <TextView
+        android:id="@+id/release_date_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/movie_title_text"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@id/poster_image_view"
+        android:text="Release date"
+        android:textColor="#000000" />
+
+    <TextView
+        android:id="@+id/average_vote_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/release_date_text"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@id/poster_image_view"
+        android:text="Average vote"
+        android:textColor="#000000" />
+
+    <RatingBar
+        android:id="@+id/rating_bar"
+        style="@style/Widget.AppCompat.RatingBar.Indicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/average_vote_text"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_toRightOf="@id/poster_image_view" />
+
+    <LinearLayout
+        android:id="@+id/buttons_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rating_bar"
+        android:orientation="horizontal"
+        android:padding="5dp">
+
+        <Button
+            android:id="@+id/search_google_button"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:text="➢ Online Reviews"
+            android:textSize="10sp" />
+
+        <Button
+            android:id="@+id/info_button"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:text="ⓘ Info"
+            android:textSize="10sp" />
+
+        <Button
+            android:id="@+id/find_tweets_button"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:text="✍ Find Tweet Reviews"
+            android:textSize="10sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/dropdown_layout"
+        android:layout_width="match_parent"
+        android:layout_height="43dp"
+        android:layout_below="@id/buttons_layout"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <Spinner
+            android:id="@+id/tweet_size_spinner"
+            android:layout_width="109dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+
+        <Spinner
+            android:id="@+id/filter_spinner"
+            android:layout_width="109dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+
+        <Button
+            android:id="@+id/go_button"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="GO!"
+            android:textSize="10sp" />
+    </LinearLayout>
+
+</RelativeLayout>
